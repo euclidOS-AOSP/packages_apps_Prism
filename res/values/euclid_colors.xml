@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 euclidOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+
+    <color name="option_border_default">#5f6368</color>
+</resources>
