@@ -3,6 +3,7 @@ package com.prism.settings.fragments.themes;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -34,8 +35,35 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
+import com.android.settings.utils.DeviceUtils;
 
-public class Themes extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+public class Themes extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_ICONS_CATEGORY = "themes_icons_category";
+    private static final String KEY_SIGNAL_ICON = "android.theme.customization.signal_icon";
+
+    private PreferenceCategory mIconsCategory;
+    private Preference mSignalIcon;
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        setPreferencesFromResource(R.xml.themes_settings, rootKey);
+
+        getActivity().setTitle(R.string.prism_themes_dashboard_title);
+
+        final Context context = getContext();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mIconsCategory = (PreferenceCategory) findPreference(KEY_ICONS_CATEGORY);
+        mSignalIcon = findPreference(KEY_SIGNAL_ICON);
+
+        if (!DeviceUtils.deviceSupportsMobileData(context)) {
+            if (mIconsCategory != null && mSignalIcon != null) {
+                mIconsCategory.removePreference(mSignalIcon);
+            }
+        }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -45,13 +73,5 @@ public class Themes extends SettingsPreferenceFragment implements Preference.OnP
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.PRISM;
-    }
-
-    @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.themes_settings, rootKey);
-
-        getActivity().setTitle(R.string.prism_themes_dashboard_title);
-
     }
 }
