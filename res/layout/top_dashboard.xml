@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/quick_access_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0">
+
+        <RelativeLayout
+            android:id="@+id/themes"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_left_top"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/prismatic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dip"
+                android:backgroundTint="?android:colorAccent"
+                android:padding="8.0dip"
+                android:src="@drawable/ic_homepage_themes" />
+
+            <TextView
+                android:id="@+id/prismatic_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prismatic"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/themes_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/prismatic_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prismatic_title"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/prismatic_summary"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lockscreen"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_top_right"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/lockscreen_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dip"
+                android:backgroundTint="?android:colorAccent"
+                android:padding="8.0dip"
+                android:src="@drawable/ic_homepage_lockscreen" />
+
+            <TextView
+                android:id="@+id/toolbox_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lockscreen_icon"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/lockscreen_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/toolbox_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbox_title"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/lockscreen_summary"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quick_access_widgets2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/controll"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_left_bottom"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/controll_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8.0dip"
+                android:backgroundTint="?android:colorAccent"
+                android:padding="8.0dip"
+                android:src="@drawable/ic_homepage_controll" />
+
+            <TextView
+                android:id="@+id/controll_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/controll_icon"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/quick_settings_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/controll_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/controll_title"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/quick_settings_summary"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_right_bottom"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/statusbar_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dip"
+                android:backgroundTint="?android:colorAccent"
+                android:padding="8.0dip"
+                android:src="@drawable/ic_homepage_status" />
+
+            <TextView
+                android:id="@+id/statusbar_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusbar_icon"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/status_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/statusbar_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statusbar_title"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/status_summary"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

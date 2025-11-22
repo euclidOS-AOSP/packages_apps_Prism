@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+xmlns:android="http://schemas.android.com/apk/res/android" 
+xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" 
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:title="@string/prism_dashboard_title">
+
+  <com.android.settingslib.widget.IllustrationPreference 
+  android:key="prism_illustration" 
+  settings:lottie_rawRes="@raw/prism_illustration" 
+  android:order="-1001"/>
+
+  <!-- Quick Access -->
+  <com.android.settingslib.widget.LayoutPreference
+  android:key="prism_dashboard_quick_access"
+  android:layout="@layout/top_dashboard"
+  android:selectable="false"/>
+
+  <!--System Settings-->
+  <Preference 
+  android:key="system_category" 
+  android:title="@string/prism_system_dashboard_title" 
+  android:summary="@string/system_dashboard_summary"
+  android:fragment="com.prism.settings.fragments.system.System" 
+  android:icon="@drawable/ic_homepage_system"/>
+
+  <!--Spoofing-->
+  <Preference
+  android:key="spoofing_category"
+  android:title="@string/prism_spoofing_dashboard_title"
+  android:summary="@string/spoofing_dashboard_summary"
+  android:fragment="com.prism.settings.fragments.spoofing.Spoofing"
+  android:icon="@drawable/ic_homepage_spoofing"/>
+
+  <!--About-->
+  <Preference
+  android:key="about_category"
+  android:title="@string/about_title"
+  android:summary="@string/about_summary"
+  android:fragment="com.prism.settings.fragments.about.About"
+  android:icon="@drawable/ic_homepage_about"/>
+
+</PreferenceScreen>

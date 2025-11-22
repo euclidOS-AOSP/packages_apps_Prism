@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019-2024 Evolution X
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/about_title">
+
+    <!-- euclidOS logo -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="euclid_logo"
+        android:layout="@layout/euclid_logo"/>
+
+    <!-- Info -->
+    <com.android.settingslib.widget.TopIntroPreference
+        android:title="@string/about_info" />
+
+    <!-- Website -->
+    <Preference
+        android:title="@string/about_website_title"
+        android:summary="@string/about_website_summary"
+        android:icon="@drawable/ic_euclid_about">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://euclidos.org/" />
+    </Preference>
+
+    <!-- Github -->
+    <Preference
+        android:title="@string/about_github_title"
+        android:summary="@string/about_github_summary"
+        android:icon="@drawable/ic_about_github">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/euclidTeam" />
+    </Preference>
+
+    <PreferenceCategory
+        android:key="founders"
+        android:title="@string/about_founders_title" />
+
+    <!-- Founder 1 -->
+        <Preference
+            android:title="@string/about_founder_1_title"
+            android:summary="@string/about_founder_1_summary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://linktr.ee/Mrick343" />
+        </Preference>
+
+</PreferenceScreen>

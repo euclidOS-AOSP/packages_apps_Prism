@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Prism -->
+    <string name="prism_dashboard_title">Prism</string>
+    <string name="prism_dashboard_summary">Prefect on every angle !!</string>
+    <string name="prism_lockscreen_dashboard_title">LockScreen</string>
+    <string name="prism_themes_dashboard_title">Themes</string>
+    <string name="prism_statusbar_dashboard_title">StatusBar</string>
+    <string name="prism_qs_dashboard_title">Quick Settings</string>
+    <string name="prism_system_dashboard_title">System</string>
+
+    <!--Prism Ui-->
+    <string name="themes_title">Themes</string>
+    <string name="prismatic_summary">Design your icons, themes, colour</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="lockscreen_summary">Customised your LockScreen</string>
+    <string name="quick_settings_title">Control Center</string>
+    <string name="quick_settings_summary">Customised QuickSettings</string>
+    <string name="status_title">Status Bar</string>
+    <string name="status_summary">Tuner, Battery, Logos</string>
+    <string name="system_dashboard_summary">System Setting</string>
+    <string name="prism_spoofing_dashboard_title">Spoofing</string>
+    <string name="spoofing_dashboard_summary">Spoofing releated Settings</string>
+     <string name="about_title">euclidOS</string>
+    <string name="about_summary">About our ROM</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="default_string">Default</string>
+    <string name="disabled">Disabled</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+
+    <!-- About -->
+    <string name="about_info">euclidOS is a custom ROM focused on minimalism, stability, and security. It delivers a clean, bloat-free experience with reliable performance and enhanced privacy for everyday users.</string>
+    <string name="about_website_title">Website</string>
+    <string name="about_website_summary">Visit our site for updates</string>
+    <string name="about_github_title" translatable="false">GitHub</string>
+    <string name="about_github_summary">Browse our code on GitHub</string>
+    <string name="about_founders_title">Founders</string>
+    <string name="about_founder_1_title" translatable="false">Mrick343</string>
+    <string name="about_founder_1_summary" translatable="false">Founder / Lead Developer</string>
+</resources>
