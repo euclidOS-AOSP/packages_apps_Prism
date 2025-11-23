@@ -5,5 +5,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/prism_spoofing_dashboard_title">
 
+        <PreferenceCategory
+    	 android:key="spoofing_category"
+         android:title="@string/prism_spoofing_dashboard_title">
+
+    <!-- Google Play Integrity -->
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="pi_enable_spoof"
+        android:title="@string/pi_spoof_title"
+        android:summary="@string/pi_spoof_summary"
+        android:defaultValue="true" />
+
+     <Preference
+         android:key="pif_json_file_preference"
+         android:title="@string/pif_spoofing_title"
+         android:summary="@string/pif_spoofing_summary"/>
+
+    <!-- displaying current PIF properties -->
+    <Preference
+         android:key="show_pif_properties"
+         android:title="@string/show_pif_properties_title"
+         android:summary="@string/show_pif_properties_summary"/>
+
+    <!-- Vbmeta hash attestation -->
+    <com.android.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.vbmeta.update"
+        android:title="@string/vbmeta_attestation_title"
+        android:summary="@string/vbmeta_attestation_summary"
+        android:defaultValue="true" />
+
+    <!-- Keybox Data -->
+    <com.android.settings.preferences.KeyboxDataPreference
+        android:key="keybox_data_setting"
+        android:title="@string/keybox_data_title"/>
+
+    <!-- Block attestation even with Keybox Data -->
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="pi_gms_cert_chain"
+        android:title="@string/pi_gmscertchain_title"
+        android:summary="@string/pi_gmscertchain_summary" />
+
+    <!-- Unlimited google photos storage -->
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="pi_photos_spoof"
+        android:title="@string/use_photos_spoof_title"
+        android:summary="@string/use_photos_spoof_summary"
+        android:defaultValue="true" />
+
+    <!-- Netflix -->
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="pi_netflix_spoof"
+        android:title="@string/netflix_spoof_title"
+        android:summary="@string/netflix_spoof_summary"
+        android:defaultValue="false" />
+
+     <!-- Unlock FPS for specific games -->
+    <com.android.settings.preferences.SecureSettingSwitchPreference
+        android:key="pi_games_spoof"
+        android:title="@string/use_games_spoof_title"
+        android:summary="@string/use_games_spoof_summary" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
