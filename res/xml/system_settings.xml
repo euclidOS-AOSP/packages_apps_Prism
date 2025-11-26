@@ -5,5 +5,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/prism_system_dashboard_title">
 
+    <!-- Incall vibration options -->
+    <PreferenceCategory
+        android:key="accessibility_incall_vibration_category"
+        android:title="@string/incall_vibration_category"
+        app:controller="com.prism.settings.fragments.system.IncallFeedbackPreferenceController">
+
+
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_connect"
+            android:title="@string/incall_vibrate_connect_title"
+            android:defaultValue="true" />
+
+
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_callwaiting"
+            android:title="@string/incall_vibrate_call_wait_title"
+            android:defaultValue="true" />
+
+
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="vibrate_on_disconnect"
+            android:title="@string/incall_vibrate_disconnect_title"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 
 </PreferenceScreen>
