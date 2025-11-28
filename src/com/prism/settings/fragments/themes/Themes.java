@@ -41,11 +41,9 @@ public class Themes extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_ICONS_CATEGORY = "themes_icons_category";
-    private static final String KEY_NAVBAR_ICON = "android.theme.customization.navbar";
     private static final String KEY_SIGNAL_ICON = "android.theme.customization.signal_icon";
 
     private PreferenceCategory mIconsCategory;
-    private Preference mNavbarIcon;
     private Preference mSignalIcon;
 
     @Override
@@ -58,17 +56,12 @@ public class Themes extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mIconsCategory = (PreferenceCategory) findPreference(KEY_ICONS_CATEGORY);
-        mNavbarIcon = (Preference) findPreference(KEY_NAVBAR_ICON);
         mSignalIcon = findPreference(KEY_SIGNAL_ICON);
 
         if (!DeviceUtils.deviceSupportsMobileData(context)) {
             if (mIconsCategory != null && mSignalIcon != null) {
                 mIconsCategory.removePreference(mSignalIcon);
             }
-
-        if (DeviceUtils.isEdgeToEdgeEnabled(context)) {
-            mIconsCategory.removePreference(mNavbarIcon);
-           }
         }
     }
 
