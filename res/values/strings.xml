@@ -2,7 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Prism -->
     <string name="prism_dashboard_title">Prism</string>
-    <string name="prism_dashboard_summary">Prefect on every angle !!</string>
+    <string name="prism_dashboard_summary">Perfect on every angle !!</string>
     <string name="prism_lockscreen_dashboard_title">LockScreen</string>
     <string name="prism_themes_dashboard_title">Themes</string>
     <string name="prism_statusbar_dashboard_title">StatusBar</string>
