@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/about_device_banner"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="30dp">
+
+        <com.prism.settings.utils.BlurWallpaperView
+            android:id="@+id/gradient_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:blurred="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/euclid_version"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/android_version"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="3dp"
+                android:text="@string/android_summary"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="bottom"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/crd_bg"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/official"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Processor -->
+
+    <LinearLayout
+        android:id="@+id/processor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0">
+
+        <LinearLayout
+            android:id="@+id/processor_top"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_left_top"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:orientation="horizontal"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/processor_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dip"
+                android:padding="5.0dip"
+                android:background="@drawable/icon_background"
+                android:src="@drawable/ic_cpu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+            <TextView
+                android:id="@+id/processor_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/processor_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/processor_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 2nd widget -->
+
+    <LinearLayout
+        android:id="@+id/about_widgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="0">
+
+        <LinearLayout
+            android:id="@+id/memory_top"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_left_top"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/ram_image"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dip"
+                android:backgroundTint="#FFFFFF"
+                android:padding="5.0dip"
+                android:background="@drawable/icon_background"
+                android:src="@drawable/ic_ram" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+            <TextView
+                android:id="@+id/memory_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/memory_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/memory_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ram_title"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/battery"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_menu_right_bottom"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:clipToPadding="true">
+
+            <ImageView
+                android:id="@+id/battery_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dip"
+                android:padding="5.0dip"
+                android:background="@drawable/icon_background"
+                android:src="@drawable/ic_battery" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="20dp"
+                android:gravity="center"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+            <TextView
+                android:id="@+id/battery_title"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/battery_title"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/battery_summary"
+                style="@style/op_control_text_style_h6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:textColor="@color/settingslib_materialColorOnSurface"
+                android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
