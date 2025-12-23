@@ -36,12 +36,15 @@ class euclidPreferenceController(context: Context) : AbstractPreferenceControlle
     private val handler = Handler()
     
     private fun getProp(propName: String): String {
-        return SystemProperties.get(propName, defaultFallback)
+        return SystemProperties
+            .get(propName, defaultFallback)
+            .replace("_", " ")
     }
 
     private fun getProp(propName: String, customFallback: String): String {
         val propValue = SystemProperties.get(propName)
-        return if (propValue.isNotEmpty()) propValue else SystemProperties.get(customFallback, "Unknown")
+        val value = if (propValue.isNotEmpty()) propValue else SystemProperties.get(customFallback, "Unknown")
+        return value.replace("_", " ")
     }
     
     private var currentMessageIndex = 0
