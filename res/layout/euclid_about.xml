@@ -126,7 +126,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dip"
-                android:padding="5.0dip"
+                android:padding="8.0dip"
                 android:background="@drawable/icon_background"
                 android:src="@drawable/ic_cpu" />
 
@@ -201,7 +201,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dip"
                 android:backgroundTint="#FFFFFF"
-                android:padding="5.0dip"
+                android:padding="8.0dip"
                 android:background="@drawable/icon_background"
                 android:src="@drawable/ic_ram" />
 
@@ -264,7 +264,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dip"
-                android:padding="5.0dip"
+                android:padding="8.0dip"
                 android:background="@drawable/icon_background"
                 android:src="@drawable/ic_battery" />
 
