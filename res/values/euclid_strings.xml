@@ -11,4 +11,10 @@
     <string name="memory_title">Memory</string>
     <string name="battery_title">Battery</string>
 
+    <!-- Maintainer Info -->
+    <string name="maintainer_title">Built &amp; Maintained By</string>
+    <string name="maintainer_unknown">UNKNOWN MAINTAINER</string>
+    <string name="maintainer_official">OFFICIAL</string>
+    <string name="maintainer_unofficial">UNOFFICIAL BUILD</string>
+
 </resources>
