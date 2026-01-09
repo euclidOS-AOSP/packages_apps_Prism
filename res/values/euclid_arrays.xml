@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: euclidOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources>
+
+    <!-- App lock timeout -->
+    <string-array name="app_lock_timeout_entries" translatable="false">
+        <item>@string/custom_timeout_summary_5secs</item>
+        <item>@string/custom_timeout_summary_10secs</item>
+        <item>@string/custom_timeout_summary_30secs</item>
+        <item>@string/custom_timeout_summary_1min</item>
+        <item>@string/custom_timeout_summary_5mins</item>
+        <item>@string/custom_timeout_summary_10mins</item>
+        <item>@string/custom_timeout_summary_30mins</item>
+    </string-array>
+
+    <string-array name="app_lock_timeout_values" translatable="false">
+        <item>5000</item>
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1800000</item>
+    </string-array>
+</resources>
