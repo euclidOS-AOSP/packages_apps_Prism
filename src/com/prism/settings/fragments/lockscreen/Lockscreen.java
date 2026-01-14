@@ -16,7 +16,6 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
 
     private Preference mWeather;
-    private OmniJawsClient mWeatherClient;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,6 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
 
         // Initialize Weather Settings
         mWeather = findPreference(KEY_WEATHER);
-        mWeatherClient = new OmniJawsClient(context);
         updateWeatherSettings();
 
         requireActivity().setTitle(R.string.prism_lockscreen_dashboard_title);
@@ -40,9 +38,9 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
 
     // Handles updating the weather summary dynamically
     private void updateWeatherSettings() {
-        if (mWeatherClient == null || mWeather == null) return;
+        if (mWeather == null) return;
 
-        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        boolean weatherEnabled = OmniJawsClient.get().isOmniJawsEnabled(getContext());
         mWeather.setEnabled(weatherEnabled);
         mWeather.setSummary(weatherEnabled
                 ? R.string.lockscreen_weather_summary
