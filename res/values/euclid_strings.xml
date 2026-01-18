@@ -82,4 +82,11 @@
     <!-- Smartspace -->
     <string name="lockscreen_smartspace_title">Smartspace</string>
     <string name="lockscreen_smartspace_summary">Show Google Smartspace when available</string>
+
+    <!-- Data usage info in QS footer -->
+    <string name="qs_footer_datausage_title">Data usage</string>
+    <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
+    
+    <!-- Quick settings -->
+    <string name="quick_settings_interface_category">Interface</string>
 </resources>

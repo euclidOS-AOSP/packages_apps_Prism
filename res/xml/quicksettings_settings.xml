@@ -5,5 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/prism_qs_dashboard_title">
 
+<PreferenceCategory
+        android:key="quick_settings_interface_category"
+        android:title="@string/quick_settings_interface_category">
+
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_footer_datausage_title"
+            android:summary="@string/qs_footer_datausage_summary" />
 
 </PreferenceScreen>
