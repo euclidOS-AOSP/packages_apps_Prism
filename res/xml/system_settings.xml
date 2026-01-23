@@ -5,5 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/prism_system_dashboard_title">
 
+<PreferenceCategory
+        android:key="floating_sidebar_category"
+        android:title="@string/floating_sidebar_category">
 
+    <!-- Sidebar -->
+        <Preference
+            android:key="floating_sidebar"
+            android:title="@string/sidebar_title"
+            android:summary="@string/sidebar_summary">
+
+             <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.libremobileos.sidebar"
+                android:targetClass="com.libremobileos.sidebar.ui.sidebar.SidebarSettingsActivity" />
+         </Preference>
+    </PreferenceCategory>
 </PreferenceScreen>

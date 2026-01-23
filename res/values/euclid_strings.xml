@@ -138,4 +138,9 @@
     <string name="about_color_customization_desc">Color changes apply system-wide to all apps that support Material You theming.\nAdjusting these colors may affect the appearance of apps across your device.</string>
     <string name="wallpaper_seed_color_title">Pick from Wallpaper</string>
     <string name="wallpaper_seed_color_desc">Extract color from your current wallpaper</string>
+
+    <!-- Sidebar -->
+    <string name="floating_sidebar_category">Sidebar</string>
+    <string name="sidebar_title">Sidebar</string>
+    <string name="sidebar_summary">Quickly open apps in a floating window</string>
 </resources>
