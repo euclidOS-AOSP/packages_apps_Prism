@@ -5,5 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/prism_lockscreen_dashboard_title">
 
+    <!-- Wake on plug -->
+    <com.android.settings.preferences.GlobalSettingSwitchPreference
+                android:key="wake_when_plugged_or_unplugged"
+                android:title="@string/wake_when_plugged_or_unplugged_title"
+                android:summary="@string/wake_when_plugged_or_unplugged_summary"
+                android:defaultValue="@*android:bool/config_unplugTurnsOnScreen"
+                settings:requiresConfig="@bool/config_show_top_level_battery" />
 
 </PreferenceScreen>
