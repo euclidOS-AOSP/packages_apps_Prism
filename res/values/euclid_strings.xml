@@ -42,4 +42,9 @@
     <string name="enable_protection">Enable protection</string>
     <string name="hide_from_launcher_title">Hide from launcher</string>
     <string name="hide_from_launcher_summary">Prevent this application from showing up in any launcher. Requires a launcher restart for changes to take effect.</string>	
+    
+    <!-- Status bar -->
+    <string name="status_bar_icons_category">Icons</string>
+    <string name="status_bar_tuner_title">Status bar tuner</string>
+    <string name="status_bar_tuner_summary">Choose which system icons can be shown</string>
 </resources>
