@@ -37,7 +37,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
 
         // Initialize Weather Settings
         mWeather = findPreference(KEY_WEATHER);
-        mWeatherClient = new OmniJawsClient(context);
+        mWeatherClient = OmniJawsClient.get();
         updateWeatherSettings();
 
         requireActivity().setTitle(R.string.prism_lockscreen_dashboard_title);
@@ -60,7 +60,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
         if (mWeather == null || mSmartspace == null) return;
 
         // Note: Using the client instance method since we initialized it in onCreate
-        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled();
+        boolean weatherEnabled = mWeatherClient.isOmniJawsEnabled(getContext());
         
         // Weather is allowed only if OmniJaws is active AND Smartspace is NOT checked
         boolean isWeatherConfigurable = !mSmartspace.isChecked() && weatherEnabled;
